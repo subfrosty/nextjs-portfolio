@@ -13,7 +13,7 @@ import code from "../../public/code.png";
 
 export default function Home() {
   return (
-    <main className="px-10 bg-white">
+    <main className="px-10 bg-white md:px-20 lg:px-40">
       <section className="min-h-screen">
         <nav className="py-10 mb-12 flex justify-between">
           <h1 className="font-burtons text-xl">subfrosty.dev</h1>
@@ -32,11 +32,11 @@ export default function Home() {
           </ul>
         </nav>
         <div className="text-center p-10 py-10">
-          <h2 className="text-5xl py-2 text-gray-800 font-medium">
+          <h2 className="text-5xl py-2 text-gray-800 font-medium md:text-6xl">
             I am <span className="font-extrabold text-cyan-500">Frosty</span>
           </h2>
-          <h3 className="text-2xl py-2">Developer and designer.</h3>
-          <p className="text-md py-5 leading-8 text-gray-800">
+          <h3 className="text-2xl py-2 md:text-3xl">Developer and designer.</h3>
+          <p className="text-md py-5 leading-8 text-gray-800 md:text-xl max-w-xl mx-auto">
             Freelancer providing services for programming and design content
             needs.
           </p>
@@ -45,7 +45,7 @@ export default function Home() {
             <AiFillLinkedin />
             <AiFillYoutube />
           </div>
-          <div className="mx-auto bg-gradient-to-b from-cyan-500 rounded-full w-80 h-80 relative overflow-hidden mt-20">
+          <div className="mx-auto bg-gradient-to-b from-cyan-500 rounded-full w-80 h-80 relative overflow-hidden mt-20 md:w-96 md:h-96">
             <Image src={deved} layout="fill" objectFit="cover" alt="deved" />
           </div>
         </div>
@@ -66,7 +66,7 @@ export default function Home() {
             programming and teaching.
           </p>
         </div>
-        <div>
+        <div className="lg:flex lg:gap-10">
           <div className="text-center shadow-lg p-10 items-center rounded-xl my-10">
             <Image
               src={design}
