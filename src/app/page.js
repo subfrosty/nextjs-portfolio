@@ -7,47 +7,121 @@ import {
 } from "react-icons/ai";
 
 import deved from "../../public/dev-ed-wave.png";
+import design from "../../public/design.png";
+import consulting from "../../public/consulting.png";
+import code from "../../public/code.png";
 
 export default function Home() {
   return (
     <main className="px-10 bg-white">
       <section className="min-h-screen">
-        <nav className="py-10 flex justify-between">
-          <h1 className=" text-xl">subfrosty.dev</h1>
+        <nav className="py-10 mb-12 flex justify-between">
+          <h1 className="font-burtons text-xl">subfrosty.dev</h1>
           <ul className="flex items-center">
             <li>
-              <BsFillMoonStarsFill className="text-2xl cursor-pointer" />
+              <BsFillMoonStarsFill className=" cursor-pointer text-2xl" />
             </li>
             <li>
               <a
-                className="bg-gradient-to-r from-cyan-500 to-teal-500 px-4 py-2 rounded-md ml-8"
-                href=""
+                className="bg-gradient-to-r from-cyan-500 text- to-cyan-600 text-white px-4 py-2 border-none rounded-md ml-8"
+                href="#"
               >
                 Resume
               </a>
             </li>
           </ul>
         </nav>
-        <div className="text-center p-10">
-          <h2 className="text-5xl py-2 font-medium">
-            I am{" "}
-            <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-teal-600">
-              Frosty
-            </span>
+        <div className="text-center p-10 py-10">
+          <h2 className="text-5xl py-2 text-gray-800 font-medium">
+            I am <span className="font-extrabold text-cyan-500">Frosty</span>
           </h2>
-          <h3 className="text-2xl py-2">Developer & Designer.</h3>
+          <h3 className="text-2xl py-2">Developer and designer.</h3>
           <p className="text-md py-5 leading-8 text-gray-800">
             Freelancer providing services for programming and design content
             needs.
           </p>
+          <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600">
+            <AiFillTwitterCircle />
+            <AiFillLinkedin />
+            <AiFillYoutube />
+          </div>
+          <div className="mx-auto bg-gradient-to-b from-cyan-500 rounded-full w-80 h-80 relative overflow-hidden mt-20">
+            <Image src={deved} layout="fill" objectFit="cover" alt="deved" />
+          </div>
         </div>
-        <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600">
-          <AiFillTwitterCircle />
-          <AiFillLinkedin />
-          <AiFillYoutube />
+      </section>
+      <section>
+        <div>
+          <h3 className="text-3xl py-1 text-gray-800">Services I offer</h3>
+          <p className="text-md py-2 leading-8 text-gray-800">
+            Since the beginning of my journey as a freelance designer and
+            developer, I&rsquo;ve done remote work for
+            <span className="text-cyan-500"> agencies </span>
+            consulted for <span className="text-cyan-500">startups </span>
+            and collaborated with talanted people to create digital products for
+            both business and consumer use.
+          </p>
+          <p className="text-md py-2 leading-8 text-gray-800">
+            I offer from a wide range of services, including brand design,
+            programming and teaching.
+          </p>
         </div>
-        <div className="relative bg-gradient-to-b from-teal-500 rounded-full w-60 h-60 mt-20 mx-auto overflow-hidden">
-          <Image src={deved} alt="dev ed" layout="fill" objectFit="cover" />
+        <div>
+          <div className="text-center shadow-lg p-10 items-center rounded-xl my-10">
+            <Image
+              src={design}
+              width={100}
+              height={100}
+              className="mx-auto"
+              alt="design"
+            />
+            <h3 className="text-lg font-medium pt-8 pb-2  ">
+              Beautiful Designs
+            </h3>
+            <p className="py-2">
+              Creating elegant designs suited for your needs following core
+              design theory.
+            </p>
+            <h4 className="py-4 text-cyan-600">Design Tools I Use</h4>
+            <p className="text-gray-800 py-1">Photoshop</p>
+            <p className="text-gray-800 py-1">Illustrator</p>
+            <p className="text-gray-800 py-1">Figma</p>
+            <p className="text-gray-800 py-1">Indesign</p>
+          </div>
+          <div className="text-center shadow-lg p-10 items-center rounded-xl my-10">
+            <Image
+              src={code}
+              width={100}
+              height={100}
+              className="mx-auto"
+              alt="code"
+            />
+            <h3 className="text-lg font-medium pt-8 pb-2  ">
+              Code your dream project
+            </h3>
+            <p className="py-2">
+              Do you have an idea for your next great website? Let's make it a
+              reality.
+            </p>
+            <h4 className="py-4 text-cyan-600">Frameworks I work with</h4>
+            <p className="text-gray-800 py-1">NextJS</p>
+            <p className="text-gray-800 py-1">Three.js</p>
+            <p className="text-gray-800 py-1">Vue</p>
+          </div>
+          <div className="text-center shadow-lg p-10 items-center rounded-xl my-10">
+            <Image
+              src={consulting}
+              width={100}
+              height={100}
+              className="mx-auto"
+              alt="consulting"
+            />
+            <h3 className="text-lg font-medium pt-8 pb-2  ">Consulting</h3>
+            <p className="py-2">
+              Are you interested in feedback for your current project? I can
+              give you tips and tricks to level it up.
+            </p>
+          </div>
         </div>
       </section>
     </main>
